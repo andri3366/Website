@@ -115,19 +115,19 @@ section{
     gap: 2.5rem;
 }
 .info-box h3{
-    font-size: 2rem;
+    font-size: 3rem;
     font-weight: 500;
     opacity: 0.8;
 }
 .info-box h1{
-    font-size: 5rem;
+    font-size: 6rem;
     font-weight: 600;
 }
 .info-box span{
     background: linear-gradient(to right, rgb(124, 201, 255), rgb(166, 150, 218));
     background-clip: text;
     color: transparent;
-    font-size: 3rem;
+    font-size: 4rem;
 }
 .btn-group{
     display: flex;
@@ -174,8 +174,8 @@ section{
     gap: 5rem;
 }
 .experience img{
-    width: 400px;
-    height: 400px;
+    width: 500px;
+    height: 500px;
     object-fit: cover;
     object-position: center;
     border-radius: 3rem;
@@ -188,7 +188,7 @@ section{
 .grid-card{
     border: 2px solid black;
     border-radius: 3rem;
-    padding: 3rem;
+    padding: 5rem;
     display: flex;
     flex-direction: column;
     align-items: baseline;
@@ -202,11 +202,23 @@ section{
     color: black;
 }
 .grid-card span{
-    font-size: 1.5rem;
+    font-size: 2.5rem;
     font-weight: 500;
     background: linear-gradient(to right, rgb(124, 201, 255), rgb(166, 150, 218));
     background-clip: text;
     color: transparent;
+    margin-top: 0.25rem;
+}
+.grid-card h3{
+    font-size: 2rem;
+    margin-top: 0.25rem;
+}
+.grid-card p{
+    font-size: 1.5rem;
+    margin-top: 0.25rem;
+}
+.grid-card i{
+    font-size: 1.5rem;
 }
 
 ::-webkit-scrollbar{
@@ -264,8 +276,22 @@ section{
     color: white;
 }
 .project-card h3{
-    font-size: 2rem;
+    font-size: 2.5rem;
     font-weight: 500;
+}
+.project-card h4{
+    font-size: 1.5rem;
+}
+.project-card p{
+    font-size: 1.3rem;
+}
+.project-card li{
+    font-size: 1.2rem;
+    margin-left: 1.5rem;
+    list-style: disc;
+}
+.project-card .btn{
+    font-size: 1.2rem;
 }
 
 /* Contact */
@@ -285,6 +311,7 @@ section{
     border: 2px solid black;
     padding: 1rem 8rem;
     font-size: 1.6rem;
+    text-align: center;
 }
 
 .input-box input::placeholder{
@@ -329,4 +356,142 @@ footer ul li a{
 .copyright{
     font-size: 300;
     margin-top: 1rem;
+}
+
+/* Responsiveness */
+
+@media(max-width:1280px) {
+    header{
+        padding: 1rem 6rem;
+        gap: 3rem;
+        font-size: 1.2rem;
+    }
+    .about .about-container{
+        gap: 7rem;
+    }
+
+    .experience-info{
+        flex-direction: column;
+    }
+    .input-box input{
+        padding: 2rem 9rem;
+        font-size: 2.5rem;
+
+    }
+    .input-box input::placeholder{
+        font-size: 2.5rem;
+    }
+    .input-box i{
+        font-size: 4rem;
+    }
+    .input-box .btn{
+        font-size: 1.3rem;
+        padding: 1rem 2rem;
+    }
+    footer ul{
+        gap: 2rem;
+        font-size: 1.5rem;
+    }
+}
+
+@media(max-width:768px) {
+    header{
+        gap: 2rem;
+        padding: 1rem 4rem;
+    }
+    header .logo{
+        font-size: 1rem;
+    }
+    header .visit-btn{
+        display: none;
+    }
+    .about .about-container{
+        gap: 4rem;
+        display: flex;
+        flex-direction: column;
+        transform: translateX(2rem)
+    }
+    .about-container img{
+        width: 300px;
+        height: 300px;
+        object-fit: cover;
+        padding: 2rem;
+    }
+    .info-box{
+        max-width: 500px;
+    }
+    .input-box input{
+        padding: 1rem 2rem;
+        font-size: 1.8rem;
+    }
+    .input-box input::placeholder{
+        font-size: 1.5rem;
+    }
+    .input-box i{
+        display: none;
+    }
+    .grid{
+        grid-template-columns: repeat(1,1fr);
+    }
+    .experience-info img{
+        width: 70vw;
+    }
+}
+
+@media(max-width:600px) {
+    header #menu-icon{
+        display: block;
+    }
+    .nav-links{
+        position: absolute;
+        top: 100%;
+        margin-top: 1rem;
+        width: 100%;
+        padding: 1rem;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        background: rgba(0,0,0,0.8);
+        border-radius: 3rem;
+        display: none;
+    }
+    .nav-links li{
+        margin-top: 1.5rem;
+        padding: 1rem;
+    }
+    .nav-links.active{
+        display: block;
+    }
+    header{
+        padding: 1rem 5rem;
+        gap: 6rem;
+
+    }
+    header .logo{
+        font-size: 1.5rem;
+    }
+    .about .about-container{
+        gap: 4rem;
+        display: flex;
+        flex-direction: column;
+        transform: translateX(1rem);
+    }
+    .about-container img{
+        width: 250px;
+        height: 250px;
+        object-fit: cover;
+        padding: 1rem;
+    }
+    .input-box input{
+        padding: 0.5rem 3rem;
+        width: 90%;
+        font-size: 1.5rem;
+    }
+    .input-box input::placeholder{
+        font-size: 1.5rem;
+    }
+    footer ul{
+        gap: 1.5rem;
+    }
 }
