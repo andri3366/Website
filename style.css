@@ -414,7 +414,7 @@ section{
 }
 .input i{
     position: absolute;
-    font-size: 2.5rem;
+    font-size: 2rem;
     top: 50%;
     left: 10px;
     transform: translate(50%, -50%)
