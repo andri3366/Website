@@ -141,6 +141,8 @@ section{
     font-weight: 500;
     text-wrap: nowrap;
     transition: 0.2s ease-in-out;
+    color: black;
+    background-color: white;
 }
 .btn:hover{
     background-color: black;
@@ -154,10 +156,24 @@ section{
     font-size: 2.3rem;
     cursor: pointer;
     transition: 0.2s ease-in-out;
+    color: black;
 }
-.socials i:hover{
+
+.social-link{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: black;
+    transition: 0.2s ease-in-out;
+}
+.social-link:visited{
+    color: black;
+}
+
+.social-link:hover{
     transform: scale(1.1);
 }
+
 
 /* Experience */
 
@@ -184,6 +200,7 @@ section{
     display: grid;
     grid-template-columns: repeat(2,1fr);
     gap: 2rem;
+    align-items: stretch;
 }
 .grid-card{
     border: 2px solid black;
@@ -210,7 +227,7 @@ section{
     margin-top: 0.25rem;
 }
 .grid-card h3{
-    font-size: 2rem;
+    font-size: 1.8rem;
     margin-top: 0.25rem;
 }
 .grid-card p{
@@ -234,8 +251,9 @@ section{
 /* Projects */
 .projects-grid{
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
     gap: 2rem;
+    justify-content: center;
 }
 
 .projects-grid-dash{
@@ -276,11 +294,16 @@ section{
     color: white;
 }
 .project-card h3{
+    background: linear-gradient(to right, rgb(124, 201, 255), rgb(166, 150, 218));
+    background-clip: text;
+    color: transparent;
     font-size: 2.5rem;
-    font-weight: 500;
 }
 .project-card h4{
     font-size: 1.5rem;
+}
+.project-card h5{
+    font-size: 1.2rem;
 }
 .project-card p{
     font-size: 1.3rem;
@@ -289,9 +312,71 @@ section{
     font-size: 1.2rem;
     margin-left: 1.5rem;
     list-style: disc;
+    text-align: left;
 }
 .project-card .btn{
     font-size: 1.2rem;
+}
+
+.git-project-grid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-top: 2rem;
+    margin-bottom: 3rem;
+}
+
+.git-project-card{
+    border: 2px solid black;
+    border-radius: 999px;
+    height: 130px;
+    width: 100%;
+    transition: 0.2s ease-in-out;
+    overflow: hidden;
+}
+
+.git-project-card:hover{
+    background: black;
+    transform: translateY(-10px) scale(1.02);
+}
+
+.git-card{
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 50px 1fr;
+    align-items: center;
+    padding: 1.5rem 2rem;
+    gap: 1rem;
+    color: black;
+    text-decoration: none;
+}
+
+.git-project-card:hover .git-card{
+    color: white;
+}
+
+.git-project-card i{
+    font-size: 2.5rem;
+    justify-self: start;
+}
+
+.git-project-card span{
+    font-size: 1.4rem;
+    font-weight: 500;
+    line-height: 1.3;
+    text-align: left;
+}
+
+.git-projects h2{
+    font-size: 1.5 rem;
+    font-weight: 500;
+    gap: 1.2rem;
+}
+
+.program{
+    color: black;
+    text-decoration: underline;
 }
 
 /* Contact */
@@ -327,6 +412,38 @@ section{
     top: 50%;
     left: 10px;
     transform: translate(50%, -50%)
+}
+
+.input textarea{
+    position: relative;
+    border-radius: 2rem;
+    border: 2px solid black;
+    padding: 1rem 2rem;
+    font-size: 1.6rem;
+    text-align: left;
+}
+
+.input textarea::placeholder{
+    font-size: 1.7rem;
+    color: rgba(128,128,128,0.8)
+}
+
+#form-message{
+    position: fixed;
+    top: 8rem;
+    left: 50%;
+    transform: translateX(-50%);
+    background: black;
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: 2rem;
+    opacity: 0;
+    transition: 0.3s ease;
+    z-index: 2000;
+}
+
+#form-message.show{
+    opacity: 0.8;
 }
 
 /* Footer */
@@ -396,8 +513,8 @@ footer ul li a{
 
 @media(max-width:768px) {
     header{
-        gap: 2rem;
-        padding: 1rem 4rem;
+        gap: 1.5rem;
+        padding: 1rem 2rem;
     }
     header .logo{
         font-size: 1rem;
@@ -436,6 +553,42 @@ footer ul li a{
     .experience-info img{
         width: 70vw;
     }
+    .git-project-grid{
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+
+    .git-project-card{
+        height: 140px;
+    }
+
+    .git-card{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        gap: 0.75rem;
+        padding: 1rem;
+    }
+
+    .git-project-card i{
+        font-size: 2rem;
+    }
+
+    .git-project-card span{
+        font-size: 1rem;
+        line-height: 1.2;
+        text-align: center;
+    }
+    footer ul{
+        gap: 1.2rem;
+        font-size: 1.4rem;
+    }
+    #form-message{
+        top: 6rem;
+    }
+
 }
 
 @media(max-width:600px) {
@@ -492,6 +645,39 @@ footer ul li a{
         font-size: 1.5rem;
     }
     footer ul{
-        gap: 1.5rem;
+        gap: 1.1rem;
+        font-size: 1.3rem;
     }
+    .git-project-grid{
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+
+    .git-project-card{
+        height: 140px;
+    }
+
+    .git-card{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        gap: 0.75rem;
+        padding: 1rem;
+    }
+
+    .git-project-card i{
+        font-size: 2rem;
+    }
+
+    .git-project-card span{
+        font-size: 1rem;
+        line-height: 1.2;
+        text-align: center;
+    }
+    #form-message{
+        top: 6rem;
+    }
+
 }
