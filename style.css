@@ -224,15 +224,21 @@ section{
     background: linear-gradient(to right, rgb(124, 201, 255), rgb(166, 150, 218));
     background-clip: text;
     color: transparent;
-    margin-top: 0.25rem;
+    margin-top: 0.75rem;
 }
 .grid-card h3{
     font-size: 1.8rem;
-    margin-top: 0.25rem;
+    margin-top: 0.75rem;
 }
+
+.grid-card h4{
+    font-size: 1rem;
+    margin-top: 0.75rem;
+}
+
 .grid-card p{
     font-size: 1.5rem;
-    margin-top: 0.25rem;
+    margin-top: 1rem;
 }
 .grid-card i{
     font-size: 1.5rem;
@@ -263,7 +269,7 @@ section{
 }
 
 .project-card{
-    padding: 3rem 2rem;
+    padding: 2rem 2rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -408,7 +414,7 @@ section{
 }
 .input i{
     position: absolute;
-    font-size: 4rem;
+    font-size: 2.5rem;
     top: 50%;
     left: 10px;
     transform: translate(50%, -50%)
